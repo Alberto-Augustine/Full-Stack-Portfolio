@@ -55,6 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/api/contact', async (req, res) => {
   try {
     await connectDB();
+    res.setHeader('Cache-Control', 'no-store');
 
     const { name, phone, email, message } = req.body;
 
@@ -98,16 +99,17 @@ app.get('/api/leads', async (req, res) => {
     await connectDB();
 
     const token = req.headers['x-admin-token'];
-    console.log('Token received:', token);
-    console.log('Headers:', JSON.stringify(req.headers));
-    
     if (!token || token !== 'alberto2025') {
-      console.log('Auth failed - token was:', token);
       return res.status(401).json({ success: false, message: 'Unauthorized' });
     }
 
+    // Disable caching completely
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+
     const leads = await Lead.find().sort({ createdAt: 1 }).lean();
-    res.json({ success: true, total: leads.length, leads });
+    res.status(200).json({ success: true, total: leads.length, leads });
 
   } catch (err) {
     console.error('Leads fetch error:', err.message);
