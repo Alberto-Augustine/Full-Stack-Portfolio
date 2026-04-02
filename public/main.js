@@ -199,6 +199,22 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   const form = e.target;
 
   try {
+    // 1. Save to MongoDB
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        message: form.message.value
+      })
+    });
+
+    const result = await res.json();
+    if (!result.success) throw new Error(result.message || 'Failed');
+
+    // 2. Send email notification via EmailJS
     await emailjs.send('service_mcyfssf', 'template_l7m0eld', {
       name: form.name.value,
       phone: form.phone.value,
@@ -209,6 +225,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     status.textContent = 'Message sent — Alberto will get back to you shortly.';
     status.className = 'form-status success';
     form.reset();
+
   } catch {
     status.textContent = 'Something went wrong. Reach out directly: +91-9481640682';
     status.className = 'form-status error';
