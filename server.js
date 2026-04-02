@@ -98,7 +98,11 @@ app.get('/api/leads', async (req, res) => {
     await connectDB();
 
     const token = req.headers['x-admin-token'];
-    if (token !== 'alberto2025') {
+    console.log('Token received:', token);
+    console.log('Headers:', JSON.stringify(req.headers));
+    
+    if (!token || token !== 'alberto2025') {
+      console.log('Auth failed - token was:', token);
       return res.status(401).json({ success: false, message: 'Unauthorized' });
     }
 
@@ -214,7 +218,7 @@ app.get('/admin', (req, res) => {
     async function loadLeads() {
       document.getElementById('leadsContainer').innerHTML = '<div class="empty">Loading...</div>';
       try {
-        const res  = await fetch('/api/leads', { headers: { 'x-admin-token': PASS } });
+        const res  = await fetch('/api/leads', { headers: { 'x-admin-token': 'alberto2025' } });
         const data = await res.json();
 
         document.getElementById('totalBadge').textContent = data.total + ' lead' + (data.total !== 1 ? 's' : '');
