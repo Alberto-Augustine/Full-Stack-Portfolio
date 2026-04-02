@@ -1,0 +1,17 @@
+{
+  "name": "alberto-portfolio",
+  "version": "1.0.0",
+  "description": "Alberto Augustine — Personal Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^7.1.1",
+    "mongoose": "^8.2.0"
+  },
+  "author": "Albert Augustine",
+  "license": "MIT"
+}

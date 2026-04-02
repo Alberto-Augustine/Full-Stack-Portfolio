@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('zy-sDrMoYmdDKoGPy')</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alberto — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- INTRO SCREEN -->
+  <div class="intro" id="intro">
+    <div class="intro-content">
+      <div class="intro-dot" id="introDot"></div>
+      <p class="intro-line" id="introLine1"></p>
+      <p class="intro-line intro-line2" id="introLine2"></p>
+    </div>
+    <div class="intro-bar" id="introBar"></div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise"></div>
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">A<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-tag reveal">Available for Opportunities</div>
+      <h1 class="hero-name reveal">Alberto</h1>
+      <p class="hero-roles reveal"><span id="roleCycle">Aspiring Footballer</span></p>
+      <blockquote class="hero-quote reveal">
+        "I train to dominate on the field<br>and build systems off it."
+      </blockquote>
+      <div class="hero-cta reveal">
+        <a href="#about" class="btn btn-primary">Explore My World</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-deco">
+      <div class="deco-circle"></div>
+      <div class="deco-circle deco-circle2"></div>
+      <div class="jersey-num">10</div>
+    </div>
+    <div class="scroll-hint"><span>scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section-label">01 — About</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2 class="section-title">More About <em>Me</em></h2>
+        <p>I'm a <span class="accent">BCA Cyber Security student</span> and an aspiring professional footballer focused on discipline, performance, and growth.</p>
+        <p>I train daily to improve my technical skills, physical strength, and mindset while also building digital skills in <span class="accent">tech and business</span>.</p>
+        <p>My goal is simple — <strong>dominate both on the field and in life.</strong></p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">19</span><span class="stat-label">Years Old</span></div>
+          <div class="stat"><span class="stat-num">BCA</span><span class="stat-label">Cyber Security</span></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Ambition</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-card">
+          <div class="card-header"><span class="card-dot"></span><span class="card-dot"></span><span class="card-dot"></span></div>
+          <div class="card-body">
+            <div class="identity-tag">Footballer</div>
+            <div class="identity-tag">Full Stack Developer</div>
+            <div class="identity-tag">Cyber Security Student</div>
+            <div class="identity-tag">Builder</div>
+          </div>
+          <div class="card-footer"><span class="status-dot"></span> Currently: Training &amp; Building</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="section-label">02 — Skills</div>
+    <h2 class="section-title reveal">What I <em>Master</em></h2>
+    <div class="skills-grid">
+      <div class="skills-col reveal">
+        <div class="skills-group-title">Tech Stack</div>
+        <div class="skill-item" data-percent="100"><div class="skill-info"><span>HTML, CSS, JavaScript</span><span class="skill-pct">100%</span></div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+        <div class="skill-item" data-percent="100"><div class="skill-info"><span>Node.js</span><span class="skill-pct">100%</span></div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+        <div class="skill-item" data-percent="90"><div class="skill-info"><span>Java</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+        <div class="skill-item" data-percent="70"><div class="skill-info"><span>C Programming</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+        <div class="skill-item" data-percent="50"><div class="skill-info"><span>Python</span><span class="skill-pct">50%</span></div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+        <div class="skill-item" data-percent="50"><div class="skill-info"><span>Cyber Security Essentials</span><span class="skill-pct">50%</span></div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      </div>
+      <div class="skills-col reveal">
+        <div class="skills-group-title">Soft Skills</div>
+        <div class="soft-skills">
+          <div class="soft-skill"><div class="soft-num">01</div><div class="soft-text"><strong>Discipline</strong><p>Every rep, every commit counts.</p></div></div>
+          <div class="soft-skill"><div class="soft-num">02</div><div class="soft-text"><strong>Consistency</strong><p>Showing up daily, without fail.</p></div></div>
+          <div class="soft-skill"><div class="soft-num">03</div><div class="soft-text"><strong>Adaptability</strong><p>Pivot fast, stay effective.</p></div></div>
+          <div class="soft-skill"><div class="soft-num">04</div><div class="soft-text"><strong>Fast Learning</strong><p>New skill? Give me a week.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOALS -->
+  <section class="section goals" id="goals">
+    <div class="section-label">03 — Goals</div>
+    <h2 class="section-title reveal">Where I'm <em>Headed</em></h2>
+    <div class="goals-grid">
+      <div class="goals-col reveal">
+        <div class="goals-tag short">Short Term</div>
+        <div class="goal-card"><div class="goal-num">01</div><p>Become a D1 Athlete &amp; Professional Football Player</p></div>
+        <div class="goal-card"><div class="goal-num">02</div><p>Get Into 3rd Division Bangalore Football Team</p></div>
+        <div class="goal-card"><div class="goal-num">03</div><p>Build a Small Startup from the Ground Up</p></div>
+        <div class="goal-card"><div class="goal-num">04</div><p>Complete Cyber Security &amp; Networking Basics</p></div>
+      </div>
+      <div class="goals-col reveal">
+        <div class="goals-tag long">Long Term</div>
+        <div class="goal-card"><div class="goal-num">01</div><p>Complete Cyber Security Bachelor's Degree</p></div>
+        <div class="goal-card"><div class="goal-num">02</div><p>Play Professional Football at the Highest Level</p></div>
+        <div class="goal-card"><div class="goal-num">03</div><p>Scale My Startup Toward International Clients</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section class="section certificates" id="certificates">
+    <div class="section-label">04 — Certificates</div>
+    <h2 class="section-title reveal">Proof of <em>Work</em></h2>
+    <div class="cert-grid">
+
+      <div class="cert-card reveal" onclick="openLightbox('https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/node.jpg', 'Node JS: Advanced Concepts')">
+        <div class="cert-thumb">
+          <img src="https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/node.jpg" alt="Node JS: Advanced Concepts" loading="lazy"/>
+          <div class="cert-thumb-overlay"><span>View Full</span></div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-platform udemy">Udemy</div>
+          <h3>Node JS: Advanced Concepts</h3>
+          <div class="cert-meta"><span class="cert-date">Feb 27, 2026</span><span class="cert-hours">16 hrs</span></div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" onclick="openLightbox('https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/UC-a0a36fca-dac5-4b5e-a92e-5c693d3d0612.jpg', 'The Complete Git Guide')">
+        <div class="cert-thumb">
+          <img src="https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/UC-a0a36fca-dac5-4b5e-a92e-5c693d3d0612.jpg" alt="The Complete Git Guide" loading="lazy"/>
+          <div class="cert-thumb-overlay"><span>View Full</span></div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-platform udemy">Udemy</div>
+          <h3>The Complete Git Guide</h3>
+          <div class="cert-meta"><span class="cert-date">Feb 27, 2026</span><span class="cert-hours">23.5 hrs</span></div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" onclick="openLightbox('https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/Frontend.png', 'Front End Web Developer')">
+        <div class="cert-thumb">
+          <img src="https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/Frontend.png" alt="Front End Web Developer" loading="lazy"/>
+          <div class="cert-thumb-overlay"><span>View Full</span></div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-platform infosys">Infosys Springboard</div>
+          <h3>Front End Web Developer</h3>
+          <div class="cert-meta"><span class="cert-date">Mar 10, 2026</span><span class="cert-hours">Achievement</span></div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" onclick="openLightbox('https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/js.png', 'JavaScript')">
+        <div class="cert-thumb">
+          <img src="https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/js.png" alt="JavaScript" loading="lazy"/>
+          <div class="cert-thumb-overlay"><span>View Full</span></div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-platform infosys">Infosys Springboard</div>
+          <h3>JavaScript</h3>
+          <div class="cert-meta"><span class="cert-date">Mar 10, 2026</span><span class="cert-hours">Completion</span></div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" onclick="openLightbox('https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/cs.png', 'CSS3')">
+        <div class="cert-thumb">
+          <img src="https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/cs.png" alt="CSS3" loading="lazy"/>
+          <div class="cert-thumb-overlay"><span>View Full</span></div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-platform infosys">Infosys Springboard</div>
+          <h3>CSS3</h3>
+          <div class="cert-meta"><span class="cert-date">Feb 26, 2026</span><span class="cert-hours">Completion</span></div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" onclick="openLightbox('https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/html.png', 'HTML5 — The Language')">
+        <div class="cert-thumb">
+          <img src="https://raw.githubusercontent.com/Alberto-Augustine/Completed-Certificates/refs/heads/main/html.png" alt="HTML5 — The Language" loading="lazy"/>
+          <div class="cert-thumb-overlay"><span>View Full</span></div>
+        </div>
+        <div class="cert-info">
+          <div class="cert-platform infosys">Infosys Springboard</div>
+          <h3>HTML5 — The Language</h3>
+          <div class="cert-meta"><span class="cert-date">Feb 26, 2026</span><span class="cert-hours">Completion</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt=""/>
+      <p class="lightbox-title" id="lightboxTitle"></p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section-label">05 — Contact</div>
+    <h2 class="section-title reveal">Let's <em>Connect</em></h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <div class="contact-label">Full Name</div>
+          <strong>Albert Augustine</strong>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-label">Phone</div>
+          <strong><a href="tel:+919481640682">+91-9481640682</a></strong>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-label">Email</div>
+          <strong><a href="mailto:25bcya08@kristujayanti.com">25bcya08@kristujayanti.com</a></strong>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-label">Age</div>
+          <strong>19 Years</strong>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="John Doe" required/>
+          </div>
+          <div class="form-group">
+            <label>Your Phone</label>
+            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" name="email" placeholder="you@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="4" placeholder="Tell me what's on your mind..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-loader" style="display:none">Sending...</span>
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Alberto<span class="dot">.</span></div>
+      <p class="footer-tagline"><em>"Dominate the field. Build the future."</em></p>
+      <p class="footer-copy">© 2026 Albert Augustine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
