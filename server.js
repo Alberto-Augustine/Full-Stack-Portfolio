@@ -32,8 +32,8 @@ const Lead = mongoose.model('Lead', leadSchema);
 //  MIDDLEWARE
 // ========================
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/cert-node.jpg', express.static(path.join(__dirname, 'public', 'cert-node.jpg')));
 
 // ========================
 //  CONTACT API — Save lead to MongoDB
@@ -257,7 +257,12 @@ app.get('/api/health', (req, res) => {
 
 // Catch-all
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  const indexPath = path.join(__dirname, 'public', 'index.html');
+  if (require('fs').existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).send('index.html not found. Make sure public/ folder exists.');
+  }
 });
 
 app.listen(PORT, () => {
